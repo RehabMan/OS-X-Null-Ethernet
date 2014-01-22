@@ -256,8 +256,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
 				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
-				MODULE_NAME = org.rehabman.NullEthernet;
-				MODULE_VERSION = 1.1.2;
+				MODULE_NAME = org.rehabman.driver.NullEthernet;
+				MODULE_VERSION = 0.1.0;
 				PRODUCT_NAME = NullEthernet;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
@@ -274,8 +274,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
 				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
-				MODULE_NAME = org.rehabman.NullEthernet;
-				MODULE_VERSION = 1.1.2;
+				MODULE_NAME = org.rehabman.driver.NullEthernet;
+				MODULE_VERSION = 0.1.0;
 				PRODUCT_NAME = NullEthernet;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
