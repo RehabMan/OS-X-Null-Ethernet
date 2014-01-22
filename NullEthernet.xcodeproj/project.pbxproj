@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		845F78B1188F704E000A4B40 /* patch.txt in Resources */ = {isa = PBXBuildFile; fileRef = 845F78B0188F704E000A4B40 /* patch.txt */; };
+		D37BD68916C605F500C255A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D37BD68716C605F500C255A2 /* InfoPlist.strings */; };
+		D37BD69916C6065300C255A2 /* NullEthernet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D37BD69716C6065300C255A2 /* NullEthernet.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		845B7E8F188F60B600D9368D /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
+		845F78B0188F704E000A4B40 /* patch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patch.txt; sourceTree = "<group>"; };
+		D37BD67F16C605F500C255A2 /* NullEthernet.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NullEthernet.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		D37BD68316C605F500C255A2 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		D37BD68616C605F500C255A2 /* NullEthernet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NullEthernet-Info.plist"; sourceTree = "<group>"; };
+		D37BD68816C605F500C255A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D37BD68D16C605F500C255A2 /* NullEthernet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NullEthernet-Prefix.pch"; sourceTree = "<group>"; };
+		D37BD69616C6065300C255A2 /* NullEthernet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullEthernet.h; sourceTree = "<group>"; };
+		D37BD69716C6065300C255A2 /* NullEthernet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullEthernet.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D37BD67A16C605F500C255A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D37BD67216C605F500C255A2 = {
+			isa = PBXGroup;
+			children = (
+				845F78B0188F704E000A4B40 /* patch.txt */,
+				845B7E8F188F60B600D9368D /* makefile */,
+				D37BD68416C605F500C255A2 /* NullEthernet */,
+				D37BD68116C605F500C255A2 /* Frameworks */,
+				D37BD68016C605F500C255A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D37BD68016C605F500C255A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D37BD67F16C605F500C255A2 /* NullEthernet.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D37BD68116C605F500C255A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D37BD68216C605F500C255A2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D37BD68216C605F500C255A2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D37BD68316C605F500C255A2 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D37BD68416C605F500C255A2 /* NullEthernet */ = {
+			isa = PBXGroup;
+			children = (
+				D37BD69616C6065300C255A2 /* NullEthernet.h */,
+				D37BD69716C6065300C255A2 /* NullEthernet.cpp */,
+				D37BD68516C605F500C255A2 /* Supporting Files */,
+			);
+			path = NullEthernet;
+			sourceTree = "<group>";
+		};
+		D37BD68516C605F500C255A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D37BD68616C605F500C255A2 /* NullEthernet-Info.plist */,
+				D37BD68716C605F500C255A2 /* InfoPlist.strings */,
+				D37BD68D16C605F500C255A2 /* NullEthernet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D37BD67B16C605F500C255A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D37BD67E16C605F500C255A2 /* NullEthernet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D37BD69016C605F500C255A2 /* Build configuration list for PBXNativeTarget "NullEthernet" */;
+			buildPhases = (
+				D37BD67916C605F500C255A2 /* Sources */,
+				D37BD67A16C605F500C255A2 /* Frameworks */,
+				D37BD67B16C605F500C255A2 /* Headers */,
+				D37BD67C16C605F500C255A2 /* Resources */,
+				D37BD67D16C605F500C255A2 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NullEthernet;
+			productName = NullEthernet;
+			productReference = D37BD67F16C605F500C255A2 /* NullEthernet.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D37BD67416C605F500C255A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Laura Müller";
+			};
+			buildConfigurationList = D37BD67716C605F500C255A2 /* Build configuration list for PBXProject "NullEthernet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D37BD67216C605F500C255A2;
+			productRefGroup = D37BD68016C605F500C255A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D37BD67E16C605F500C255A2 /* NullEthernet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D37BD67C16C605F500C255A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37BD68916C605F500C255A2 /* InfoPlist.strings in Resources */,
+				845F78B1188F704E000A4B40 /* patch.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		D37BD67D16C605F500C255A2 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D37BD67916C605F500C255A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37BD69916C6065300C255A2 /* NullEthernet.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D37BD68716C605F500C255A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D37BD68816C605F500C255A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D37BD68E16C605F500C255A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
+				"LLVM_LTO[arch=x86_64]" = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-fno-stack-protector";
+				"OTHER_LDFLAGS[arch=x86_64]" = "-dead_strip";
+				SDKROOT = macosx10.6;
+				SYMROOT = Build;
+			};
+			name = Debug;
+		};
+		D37BD68F16C605F500C255A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
+				"LLVM_LTO[arch=x86_64]" = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-fno-stack-protector";
+				"OTHER_LDFLAGS[arch=x86_64]" = "-dead_strip";
+				SDKROOT = macosx10.6;
+				SYMROOT = Build;
+			};
+			name = Release;
+		};
+		D37BD69116C605F500C255A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = $MODULE_VERSION;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
+				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
+				MODULE_NAME = org.rehabman.NullEthernet;
+				MODULE_VERSION = 1.1.2;
+				PRODUCT_NAME = NullEthernet;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		D37BD69216C605F500C255A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = $MODULE_VERSION;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
+				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
+				MODULE_NAME = org.rehabman.NullEthernet;
+				MODULE_VERSION = 1.1.2;
+				PRODUCT_NAME = NullEthernet;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D37BD67716C605F500C255A2 /* Build configuration list for PBXProject "NullEthernet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37BD68E16C605F500C255A2 /* Debug */,
+				D37BD68F16C605F500C255A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D37BD69016C605F500C255A2 /* Build configuration list for PBXNativeTarget "NullEthernet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37BD69116C605F500C255A2 /* Debug */,
+				D37BD69216C605F500C255A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D37BD67416C605F500C255A2 /* Project object */;
+}
