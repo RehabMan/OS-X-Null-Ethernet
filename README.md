@@ -18,7 +18,7 @@ In order to cause the kext to be loaded, you need to apply the DSDT patch provid
 
 Downloads are available on Bitbucket:
 
-TBD
+https://bitbucket.org/RehabMan/os-x-null-ethernet/downloads
 
 
 ### Build Environment
@@ -42,7 +42,7 @@ This project does not support 32-bit builds.  It is coded for 64-bit only.
 
 The source code is maintained at the following sites:
 
-https://code.google.com/p/os-x-null-ethernet/
+https://bitbucket.org/RehabMan/os-x-null-ethernet
 
 https://github.com/RehabMan/OS-X-Null-Ethernet
 
@@ -64,3 +64,6 @@ TBD
 - Initial build created by RehabMan
 
 
+### History:
+
+The source for this kext is heavily based on Mieze's RealtekRTL8111.kext.  I simply stripped everything meaningful from it to leave just a shell of an Ethernet driver.
