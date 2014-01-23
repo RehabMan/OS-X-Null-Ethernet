@@ -49,9 +49,11 @@ https://github.com/RehabMan/OS-X-Null-Ethernet
 
 ### Feedback:
 
-Please use the following thread on tonymacx86.com for feedback, questions, and help:
+Please use the following threads for feedback, questions, and help:
 
-TBD
+http://www.tonymacx86.com/network/122884-mac-app-store-access-nullethernet-kext.html
+
+http://www.insanelymac.com/forum/topic/295534-mac-app-store-access-with-nullethernetkext/
 
 
 ### Known issues:
