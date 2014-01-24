@@ -32,10 +32,10 @@
 			<string>${MODULE_NAME}</string>
 			<key>IOClass</key>
 			<string>org_rehabman_NullEthernet</string>
-			<key>IONameMatch</key>
-			<string>NULE0000</string>
 			<key>IOProviderClass</key>
 			<string>IOACPIPlatformDevice</string>
+			<key>IONameMatch</key>
+			<string>NULE0000</string>
 			<key>Vendor</key>
 			<string>RehabMan</string>
 			<key>Model</key>

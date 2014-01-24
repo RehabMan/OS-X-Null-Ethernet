@@ -32,16 +32,16 @@
 			<string>org.rehabman.driver.NullEthernet</string>
 			<key>IOClass</key>
 			<string>org_rehabman_NullEthernet</string>
-			<key>IOPCIMatch</key>
-			<string>0x816810ec</string>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
+			<key>IOPCIMatch</key>
+			<string>0x816810ec</string>
+			<key>MAC-address</key>
+			<data>EjRWeKvN</data>
 			<key>Vendor</key>
 			<string>RehabMan</string>
 			<key>Model</key>
 			<string>NullEthernet</string>
-			<key>MAC-address</key>
-			<data>EjRWeKvN</data>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
