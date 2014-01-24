@@ -61,6 +61,39 @@ void NullEthernet::free()
     DebugLog("free() <===>\n");
 }
 
+bool NullEthernet::initMACfromACPI()
+{
+    bool result = false;
+    OSObject *ret = NULL;
+    IOACPIPlatformDevice* pACPI = OSDynamicCast(IOACPIPlatformDevice, m_pProvider);
+    if (NULL != pACPI && kIOReturnSuccess == pACPI->evaluateObject("MAC", &ret) && NULL != ret)
+    {
+        // get MAC address from DSDT if provided...
+        OSData* pData = OSDynamicCast(OSData, ret);
+        if (pData && pData->getLength() == kIOEthernetAddressSize)
+        {
+            bcopy(pData->getBytesNoCopy(), m_rgMacAddr, kIOEthernetAddressSize);
+            AlwaysLog("Using MAC address from DSDT: %02x:%02x:%02x:%02x:%02x:%02x\n", m_rgMacAddr[0], m_rgMacAddr[1], m_rgMacAddr[2], m_rgMacAddr[3], m_rgMacAddr[4], m_rgMacAddr[5]);
+            result = true;
+        }
+        ret->release();
+    }
+    return result;
+}
+
+bool NullEthernet::initMACfromProvider()
+{
+    bool result = false;
+    OSData* pData = OSDynamicCast(OSData, m_pProvider->getProperty("RM,MAC-address"));
+    if (pData && pData->getLength() == kIOEthernetAddressSize)
+    {
+        bcopy(pData->getBytesNoCopy(), m_rgMacAddr, kIOEthernetAddressSize);
+        AlwaysLog("Using MAC address from provider: %02x:%02x:%02x:%02x:%02x:%02x\n", m_rgMacAddr[0], m_rgMacAddr[1], m_rgMacAddr[2], m_rgMacAddr[3], m_rgMacAddr[4], m_rgMacAddr[5]);
+        result = true;
+    }
+    return result;
+}
+
 bool NullEthernet::start(IOService *provider)
 {
     DebugLog("start() ===>\n");
@@ -72,7 +105,7 @@ bool NullEthernet::start(IOService *provider)
     }
 
     // retain provider...
-    m_pProvider = OSDynamicCast(IOACPIPlatformDevice, provider);
+    m_pProvider = OSDynamicCast(IOService, provider);
     if (!m_pProvider)
     {
         AlwaysLog("NullEthernet: No provider.\n");
@@ -80,31 +113,19 @@ bool NullEthernet::start(IOService *provider)
     }
     m_pProvider->retain();
 
-    // get MAC address from DSDT if provided...
-    OSObject *ret;
-    IOReturn result = m_pProvider->evaluateObject("MAC", &ret);
-    if (kIOReturnSuccess == result && NULL != ret)
+    // initialize MAC address: priority is from DSDT, then provider, last is default
+    if (!initMACfromACPI() && !initMACfromProvider())
     {
-        OSData* pData = OSDynamicCast(OSData, ret);
-        if (pData && pData->getLength() == kIOEthernetAddressSize)
-        {
-            bcopy(pData->getBytesNoCopy(), m_rgMacAddr, kIOEthernetAddressSize);
-            AlwaysLog("Using MAC address from DSDT: %02x:%02x:%02x:%02x:%02x:%02x\n", m_rgMacAddr[0], m_rgMacAddr[1], m_rgMacAddr[2], m_rgMacAddr[3], m_rgMacAddr[4], m_rgMacAddr[5]);
-        }
-        else
-        {
-            AlwaysLog("Using default MAC address: %02x:%02x:%02x:%02x:%02x:%02x\n", m_rgMacAddr[0], m_rgMacAddr[1], m_rgMacAddr[2], m_rgMacAddr[3], m_rgMacAddr[4], m_rgMacAddr[5]);
-        }
-        ret->release();
+        AlwaysLog("Using default MAC address: %02x:%02x:%02x:%02x:%02x:%02x\n", m_rgMacAddr[0], m_rgMacAddr[1], m_rgMacAddr[2], m_rgMacAddr[3], m_rgMacAddr[4], m_rgMacAddr[5]);
     }
-
+    
     if (!attachInterface(reinterpret_cast<IONetworkInterface**>(&m_netif)))
     {
         AlwaysLog("NullEthernet: attachInterface() failed.\n");
         goto error1;
     }
 
-    AlwaysLog("NullEthernet: NullEthernet v0.01 starting.\n");
+    AlwaysLog("NullEthernet: NullEthernet v1.0.0 starting.\n");
 
 done:
     DebugLog("start() <===\n");

@@ -114,7 +114,7 @@ public:
     virtual IOReturn setProperties(OSObject* props);
 
 private:
-    IOACPIPlatformDevice* m_pProvider;
+    IOService* m_pProvider;
     IONetworkInterface* m_netif;
     bool m_isEnabled;
     bool m_linkUp;
@@ -128,5 +128,7 @@ private:
     PRIVATE bool setupMediumDict();
 
     PRIVATE IOReturn setPropertiesGated(OSObject* props);
+    PRIVATE bool initMACfromACPI();
+    PRIVATE bool initMACfromProvider();
 };
 

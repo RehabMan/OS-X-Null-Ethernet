@@ -13,13 +13,13 @@ endif
 
 .PHONY: all
 all: ssdt-rmne.aml
-	xcodebuild build $(OPTIONS) -configuration Debug
-	xcodebuild build $(OPTIONS) -configuration Release
+	xcodebuild build $(OPTIONS) -scheme NullEthernet -configuration Debug
+	xcodebuild build $(OPTIONS) -scheme NullEthernet -configuration Release
 
 .PHONY: clean
 clean:
-	xcodebuild clean $(OPTIONS) -configuration Debug
-	xcodebuild clean $(OPTIONS) -configuration Release
+	xcodebuild clean $(OPTIONS) -scheme NullEthernet -configuration Debug
+	xcodebuild clean $(OPTIONS) -scheme NullEthernet -configuration Release
 	
 .PHONY: update_kernelcache
 update_kernelcache:
@@ -35,6 +35,11 @@ install_debug:
 install:
 	sudo cp -R ./Build/Release/$(KEXT) /System/Library/Extensions
 	make update_kernelcache
+	
+.PHONY: install_inject
+	sudo cp -R ./Build/Release/$(KEXT) /System/Library/Extensions
+	sudo cp -R ./Build/Release/NullEthernetInjector.kext /System/Library/Extensions
+	make update_kernelcache
 
 .PHONY: distribute
 distribute:
@@ -42,6 +47,8 @@ distribute:
 	mkdir ./Distribute
 	cp -R ./Build/Debug ./Distribute
 	cp -R ./Build/Release ./Distribute
+	rm -Rf ./Distribute/Debug/NullEthernetInjector.kext
+	mv ./Distribute/Release/NullEthernetInjector.kext ./Distribute
 	cp patch.txt ./Distribute
 	cp ssdt-rmne.aml ./Distribute
 	find ./Distribute -path *.DS_Store -delete

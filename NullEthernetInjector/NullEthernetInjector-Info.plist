@@ -26,39 +26,26 @@
 	<string>$MODULE_VERSION</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>NullEthernet</key>
+		<key>NullEthernetInjector</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>${MODULE_NAME}</string>
 			<key>IOClass</key>
 			<string>org_rehabman_NullEthernet</string>
-			<key>IONameMatch</key>
-			<string>NULE0000</string>
+			<key>IOPCIMatch</key>
+			<string>0x816810ec</string>
 			<key>IOProviderClass</key>
-			<string>IOACPIPlatformDevice</string>
+			<string>IOPCIDevice</string>
 			<key>Vendor</key>
 			<string>RehabMan</string>
 			<key>Model</key>
 			<string>NullEthernet</string>
+			<key>MAC-address</key>
+			<data>EjRWeKvN</data>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 RehabMan. All rights reserved.</string>
-	<key>OSBundleLibraries</key>
-	<dict>
-		<key>com.apple.iokit.IOACPIFamily</key>
-		<string>1.0d1</string>
-		<key>com.apple.iokit.IONetworkingFamily</key>
-		<string>1.5.0</string>
-		<key>com.apple.kpi.bsd</key>
-		<string>8.10.0</string>
-		<key>com.apple.kpi.iokit</key>
-		<string>8.10.0</string>
-		<key>com.apple.kpi.libkern</key>
-		<string>8.10.0</string>
-		<key>com.apple.kpi.mach</key>
-		<string>8.10.0</string>
-	</dict>
 	<key>OSBundleRequired</key>
 	<string>Network-Root</string>
 </dict>

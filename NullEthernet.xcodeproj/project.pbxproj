@@ -14,6 +14,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8420C5C018922B66009BF3EE /* NullEthernetInjector-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "NullEthernetInjector-Info.plist"; path = "NullEthernetInjector/NullEthernetInjector-Info.plist"; sourceTree = "<group>"; };
+		8420C5C218922BEC009BF3EE /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = NullEthernetInjector/readme.txt; sourceTree = "<group>"; };
+		8420C5CA18922DBF009BF3EE /* NullEthernetInjector.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NullEthernetInjector.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B7E8F188F60B600D9368D /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
 		845F78B0188F704E000A4B40 /* patch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patch.txt; sourceTree = "<group>"; };
 		848CB71B1891EBC0003E1DB1 /* ssdt-rmne.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ssdt-rmne.dsl"; sourceTree = "<group>"; };
@@ -27,6 +30,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8420C5C518922DBF009BF3EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D37BD67A16C605F500C255A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8420C5BF18922B05009BF3EE /* NullEthernetInjector */ = {
+			isa = PBXGroup;
+			children = (
+				8420C5C018922B66009BF3EE /* NullEthernetInjector-Info.plist */,
+				8420C5C218922BEC009BF3EE /* readme.txt */,
+			);
+			name = NullEthernetInjector;
+			sourceTree = "<group>";
+		};
 		D37BD67216C605F500C255A2 = {
 			isa = PBXGroup;
 			children = (
@@ -44,6 +63,7 @@
 				845F78B0188F704E000A4B40 /* patch.txt */,
 				845B7E8F188F60B600D9368D /* makefile */,
 				D37BD68416C605F500C255A2 /* NullEthernet */,
+				8420C5BF18922B05009BF3EE /* NullEthernetInjector */,
 				D37BD68116C605F500C255A2 /* Frameworks */,
 				D37BD68016C605F500C255A2 /* Products */,
 			);
@@ -53,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D37BD67F16C605F500C255A2 /* NullEthernet.kext */,
+				8420C5CA18922DBF009BF3EE /* NullEthernetInjector.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +117,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		8420C5C618922DBF009BF3EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D37BD67B16C605F500C255A2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +134,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8420C5C918922DBF009BF3EE /* NullEthernetInjector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8420C5D518922DBF009BF3EE /* Build configuration list for PBXNativeTarget "NullEthernetInjector" */;
+			buildPhases = (
+				8420C5C418922DBF009BF3EE /* Sources */,
+				8420C5C518922DBF009BF3EE /* Frameworks */,
+				8420C5C618922DBF009BF3EE /* Headers */,
+				8420C5C718922DBF009BF3EE /* Resources */,
+				8420C5C818922DBF009BF3EE /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NullEthernetInjector;
+			productName = NullEthernetInjector;
+			productReference = 8420C5CA18922DBF009BF3EE /* NullEthernetInjector.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
 		D37BD67E16C605F500C255A2 /* NullEthernet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D37BD69016C605F500C255A2 /* Build configuration list for PBXNativeTarget "NullEthernet" */;
@@ -132,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Laura Müller";
+				ORGANIZATIONNAME = RehabMan;
 			};
 			buildConfigurationList = D37BD67716C605F500C255A2 /* Build configuration list for PBXProject "NullEthernet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -147,11 +194,19 @@
 			projectRoot = "";
 			targets = (
 				D37BD67E16C605F500C255A2 /* NullEthernet */,
+				8420C5C918922DBF009BF3EE /* NullEthernetInjector */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8420C5C718922DBF009BF3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D37BD67C16C605F500C255A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +220,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXRezBuildPhase section */
+		8420C5C818922DBF009BF3EE /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D37BD67D16C605F500C255A2 /* Rez */ = {
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +237,13 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8420C5C418922DBF009BF3EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D37BD67916C605F500C255A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +266,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8420C5D618922DBF009BF3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NullEthernetInjector/NullEthernetInjector-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "NullEthernetInjector/NullEthernetInjector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULE_NAME = org.rehabman.injector.NullEthernetInjector;
+				MODULE_VERSION = 1.0.0d1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = NullEthernetInjector;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		8420C5D718922DBF009BF3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NullEthernetInjector/NullEthernetInjector-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "NullEthernetInjector/NullEthernetInjector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULE_NAME = org.rehabman.injector.NullEthernetInjector;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = NullEthernetInjector;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
 		D37BD68E16C605F500C255A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,7 +405,7 @@
 				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
 				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
 				MODULE_NAME = org.rehabman.driver.NullEthernet;
-				MODULE_VERSION = 0.1.0;
+				MODULE_VERSION = 1.0.0;
 				PRODUCT_NAME = NullEthernet;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
@@ -279,7 +423,7 @@
 				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
 				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
 				MODULE_NAME = org.rehabman.driver.NullEthernet;
-				MODULE_VERSION = 0.1.0;
+				MODULE_VERSION = 1.0.0;
 				PRODUCT_NAME = NullEthernet;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
@@ -290,6 +434,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8420C5D518922DBF009BF3EE /* Build configuration list for PBXNativeTarget "NullEthernetInjector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8420C5D618922DBF009BF3EE /* Debug */,
+				8420C5D718922DBF009BF3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D37BD67716C605F500C255A2 /* Build configuration list for PBXProject "NullEthernet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
