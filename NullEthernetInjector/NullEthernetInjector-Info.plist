@@ -29,7 +29,7 @@
 		<key>NullEthernetInjector</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>${MODULE_NAME}</string>
+			<string>org.rehabman.driver.NullEthernet</string>
 			<key>IOClass</key>
 			<string>org_rehabman_NullEthernet</string>
 			<key>IOPCIMatch</key>

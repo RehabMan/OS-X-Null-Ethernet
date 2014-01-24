@@ -37,6 +37,7 @@ install:
 	make update_kernelcache
 	
 .PHONY: install_inject
+install_inject:
 	sudo cp -R ./Build/Release/$(KEXT) /System/Library/Extensions
 	sudo cp -R ./Build/Release/NullEthernetInjector.kext /System/Library/Extensions
 	make update_kernelcache
