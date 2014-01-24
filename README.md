@@ -13,6 +13,13 @@ Install the kext, NullEthernet.kext, itself with Kext Wizard or your favorite ke
 
 In order to cause the kext to be loaded, you need to apply the DSDT patch provided in patch.txt.  It adds a fake device ‘RMNE’ which the driver will attach to.
 
+You may also use the provided ssdt-rmne.aml as an extra SSDT for the boot loader to load.
+
+To install the SSDT:
+
+Chameleon: Place in /Extra/ssdt.aml or /Extra/ssdt-1.aml, /Extra/ssdt-2.aml, depending on what SSDTs you already have installed.
+Clover: Place in /EFI/CLOVER/patched/ssdt-X.aml where 'X' is some number that you're not already using for SSDTs.
+
 
 ### Downloads:
 

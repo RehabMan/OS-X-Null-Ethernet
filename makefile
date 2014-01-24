@@ -12,7 +12,7 @@ OPTIONS:=$(OPTIONS) -arch x86_64
 endif
 
 .PHONY: all
-all:
+all: ssdt-rmne.aml
 	xcodebuild build $(OPTIONS) -configuration Debug
 	xcodebuild build $(OPTIONS) -configuration Release
 
@@ -20,7 +20,7 @@ all:
 clean:
 	xcodebuild clean $(OPTIONS) -configuration Debug
 	xcodebuild clean $(OPTIONS) -configuration Release
-
+	
 .PHONY: update_kernelcache
 update_kernelcache:
 	sudo touch /System/Library/Extensions
@@ -49,3 +49,7 @@ distribute:
 	rm /tmp/org.voodoo.rm.dsym.sh
 	ditto -c -k --sequesterRsrc --zlibCompressionLevel 9 ./Distribute ./Archive.zip
 	mv ./Archive.zip ./Distribute/`date +$(DIST)-%Y-%m%d.zip`
+
+ssdt-rmne.aml : ssdt-rmne.dsl
+	iasl -p $@ $^
+

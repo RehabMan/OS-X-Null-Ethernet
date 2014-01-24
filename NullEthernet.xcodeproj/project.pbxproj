@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		845F78B1188F704E000A4B40 /* patch.txt in Resources */ = {isa = PBXBuildFile; fileRef = 845F78B0188F704E000A4B40 /* patch.txt */; };
+		848CB71C1891EBC0003E1DB1 /* ssdt-rmne.dsl in Resources */ = {isa = PBXBuildFile; fileRef = 848CB71B1891EBC0003E1DB1 /* ssdt-rmne.dsl */; };
 		D37BD68916C605F500C255A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D37BD68716C605F500C255A2 /* InfoPlist.strings */; };
 		D37BD69916C6065300C255A2 /* NullEthernet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D37BD69716C6065300C255A2 /* NullEthernet.cpp */; };
 /* End PBXBuildFile section */
@@ -15,6 +16,7 @@
 /* Begin PBXFileReference section */
 		845B7E8F188F60B600D9368D /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
 		845F78B0188F704E000A4B40 /* patch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patch.txt; sourceTree = "<group>"; };
+		848CB71B1891EBC0003E1DB1 /* ssdt-rmne.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ssdt-rmne.dsl"; sourceTree = "<group>"; };
 		D37BD67F16C605F500C255A2 /* NullEthernet.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NullEthernet.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37BD68316C605F500C255A2 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
 		D37BD68616C605F500C255A2 /* NullEthernet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NullEthernet-Info.plist"; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 		D37BD67216C605F500C255A2 = {
 			isa = PBXGroup;
 			children = (
+				848CB71B1891EBC0003E1DB1 /* ssdt-rmne.dsl */,
 				845F78B0188F704E000A4B40 /* patch.txt */,
 				845B7E8F188F60B600D9368D /* makefile */,
 				D37BD68416C605F500C255A2 /* NullEthernet */,
@@ -155,6 +158,7 @@
 			files = (
 				D37BD68916C605F500C255A2 /* InfoPlist.strings in Resources */,
 				845F78B1188F704E000A4B40 /* patch.txt in Resources */,
+				848CB71C1891EBC0003E1DB1 /* ssdt-rmne.dsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
