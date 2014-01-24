@@ -20,6 +20,10 @@ To install the SSDT:
 Chameleon: Place in /Extra/ssdt.aml or /Extra/ssdt-1.aml, /Extra/ssdt-2.aml, depending on what SSDTs you already have installed.
 Clover: Place in /EFI/CLOVER/patched/ssdt-X.aml where 'X' is some number that you're not already using for SSDTs.
 
+Note:
+
+If you've previously had network interfaces setup (eg. not a fresh install), you may need to remove all network interfaces and set them up again.  To do that, go into SysPrefs->Network and remove all interfaces, Apply, then remove /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist.  Reboot, then add all your network interfaces back, starting with NullEthernet.
+
 
 ### Downloads:
 
