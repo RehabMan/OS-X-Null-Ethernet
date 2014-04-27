@@ -49,7 +49,7 @@
 		<key>com.apple.iokit.IOACPIFamily</key>
 		<string>1.0d1</string>
 		<key>com.apple.iokit.IONetworkingFamily</key>
-		<string>1.5.0</string>
+		<string>1.1.0</string>
 		<key>com.apple.kpi.bsd</key>
 		<string>8.10.0</string>
 		<key>com.apple.kpi.iokit</key>
