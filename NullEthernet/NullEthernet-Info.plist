@@ -5,7 +5,7 @@
 	<key>Source Code</key>
 	<string>https://github.com/RehabMan/OS-X-NullEthernet</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.0.0, Copyright © 2014 RehabMan. All rights reserved.</string>
+	<string>1.0.1, Copyright © 2014 RehabMan. All rights reserved.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>

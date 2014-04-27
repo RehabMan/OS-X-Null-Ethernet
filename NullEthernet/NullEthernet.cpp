@@ -125,7 +125,7 @@ bool NullEthernet::start(IOService *provider)
         goto error1;
     }
 
-    AlwaysLog("NullEthernet: NullEthernet v1.0.0 starting.\n");
+    AlwaysLog("NullEthernet: NullEthernet v1.0.1 starting.\n");
 
 done:
     DebugLog("start() <===\n");
