@@ -131,11 +131,15 @@ http://www.insanelymac.com/forum/topic/295534-mac-app-store-access-with-nullethe
 
 ### Change Log:
 
-2014-01-23 (RehabMan)
+2014-04-27 v1.0.1
+
+- Lowered dependency requirements for better compatibility with Snow Leopard.
+
+2014-01-23 v1.0.0
 
 - Added ability to attach to a PCIe device instead of ACPI device.
 
-2014-01-21 (RehabMan)
+2014-01-21
 
 - Initial build created by RehabMan
 
