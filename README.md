@@ -28,7 +28,7 @@ Clover: Place in /EFI/CLOVER/patched/ssdt-X.aml where 'X' is some number that yo
 
 This method is most appropriate if you have a PCIe Ethernet device that is not supported or has drivers that do not work for it.  Instead of creating a special device in your DSDT, the kext can directly attach to the PCI device.  Install the kext, NullEthernet.kext, with Kext Wizard or your favorite kext installer, just as above.
 
-Instead of DSDT patching, you will instead create a custom NullEthernetInjector.  To do so, modify the Info.plist in NullEthernetInjector.kext/Contents/Info.plist.  Change IOPCIMatch to suit your device.  Also, change the MAC-address property as appropriate.  Then install your custom NullEthernetInjector.kext like you would any kext.  When updates happen to the main NullEthernet.kext this step does not need to be repeated.
+Instead of DSDT patching, you will instead create a custom NullEthernetInjector.  To do so, modify the Info.plist in NullEthernetInjector.kext/Contents/Info.plist.  Change IOPCIMatch to suit your device.  Also, change the MAC-address property as appropriate (default is 12:34:56:78:ab:cd).  Then install your custom NullEthernetInjector.kext like you would any kext.  When updates happen to the main NullEthernet.kext this step does not need to be repeated.
 
 
 ### Providing the MAC address:
@@ -37,7 +37,7 @@ Obviously the kext cannot provide a real MAC address from the device.  Instead i
 
 - the default MAC address is 01:02:03:04:05:06
 
-- if there is a MAC-address property provided in NullEthernet.kext/Contents/Info.plist, that one is used. By default, there is nothing here.
+- if there is a MAC-address property provided in NullEthernet.kext/Contents/Info.plist (or if using the injector, in NullEthernetInjector.kext/Contents/Info.plist), that one is used. By default, there is no MAC-address specified in NullEthernet.kext/Contents/Info.plist.
 
 - if loading from ACPI (DSDT patch), a method called MAC can provide a MAC address.  The return value must be a buffer of exactly 6-bytes.  The default in patch.txt is 11:22:33:44:55:66
 
@@ -59,7 +59,7 @@ Method (_DSM, 4, NotSerialized)\n
 end;
 ```
 
-As noted in the Injector's readme.txt, you can even set the built-in property while you're at it:
+You can even set the built-in property while you're at it:
 
 ```
 into method label _DSM parent_label NIC parent_label RP06 remove_entry;
