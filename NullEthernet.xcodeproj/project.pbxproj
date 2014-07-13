@@ -281,7 +281,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.1d1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -322,7 +322,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0.1d1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -405,7 +405,7 @@
 				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
 				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
 				MODULE_NAME = org.rehabman.driver.NullEthernet;
-				MODULE_VERSION = 1.0.1;
+				MODULE_VERSION = 1.0.2;
 				PRODUCT_NAME = NullEthernet;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
@@ -423,7 +423,7 @@
 				GCC_PREFIX_HEADER = "NullEthernet/NullEthernet-Prefix.pch";
 				INFOPLIST_FILE = "NullEthernet/NullEthernet-Info.plist";
 				MODULE_NAME = org.rehabman.driver.NullEthernet;
-				MODULE_VERSION = 1.0.1;
+				MODULE_VERSION = 1.0.2;
 				PRODUCT_NAME = NullEthernet;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";

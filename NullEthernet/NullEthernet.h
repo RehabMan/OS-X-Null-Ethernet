@@ -123,7 +123,7 @@ private:
 	OSDictionary *m_mediumDict;
 	IONetworkMedium *m_mediumTable[MEDIUM_INDEX_COUNT];
     IOCommandGate* m_pCommandGate;
-    char m_rgMacAddr[kIOEthernetAddressSize];
+    unsigned char m_rgMacAddr[kIOEthernetAddressSize];
 
     PRIVATE bool setupMediumDict();
 
