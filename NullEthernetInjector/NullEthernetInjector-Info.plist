@@ -8,8 +8,6 @@
 	<string>1.0.2, Copyright © 2014 RehabMan. All rights reserved.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
 	<string>${MODULE_NAME}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
