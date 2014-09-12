@@ -5,7 +5,7 @@
 	<key>Source Code</key>
 	<string>https://github.com/RehabMan/OS-X-NullEthernet</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.0.2, Copyright © 2014 RehabMan. All rights reserved.</string>
+	<string>$MODULE_VERSION, Copyright © 2014 RehabMan. All rights reserved.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleIdentifier</key>
@@ -26,6 +26,8 @@
 	<dict>
 		<key>NullEthernetInjector</key>
 		<dict>
+			<key>RM,Version</key>
+			<string>${PRODUCT_NAME} ${MODULE_VERSION}</string>
 			<key>CFBundleIdentifier</key>
 			<string>org.rehabman.driver.NullEthernet</string>
 			<key>IOClass</key>
