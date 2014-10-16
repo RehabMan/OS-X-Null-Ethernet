@@ -298,9 +298,7 @@
 				INFOPLIST_FILE = "NullEthernetInjector/NullEthernetInjector-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULE_NAME = org.rehabman.injector.NullEthernetInjector;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = NullEthernetInjector;
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -332,7 +330,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULE_NAME = org.rehabman.injector.NullEthernetInjector;
 				PRODUCT_NAME = NullEthernetInjector;
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Release;
@@ -341,7 +338,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -371,7 +367,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
