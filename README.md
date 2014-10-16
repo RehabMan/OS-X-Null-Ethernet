@@ -93,7 +93,7 @@ https://bitbucket.org/RehabMan/os-x-null-ethernet/downloads
 
 ### Build Environment
 
-My build environment is currently Xcode 5.02, using SDK 10.6, targeting OS X 10.6.
+My build environment is currently Xcode 6.1, using SDK 10.6, targeting OS X 10.6.
 
 This kext can be built with any of the following SDKs: 10.8, 10.7, or 10.6 but only by enabling
 the hacks previously used in the code (see DISABLE_ALL_HACKS in the source code)
@@ -130,6 +130,13 @@ http://www.insanelymac.com/forum/topic/295534-mac-app-store-access-with-nullethe
 
 
 ### Change Log:
+
+2014-10-16 v1.0.3
+
+- Fixed some minor bugs
+
+- Build with Xcode 6.1
+
 
 2014-04-27 v1.0.1
 
