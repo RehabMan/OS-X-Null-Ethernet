@@ -21,7 +21,7 @@ To install the SSDT:
 
 Chameleon: Place in /Extra/ssdt.aml or /Extra/ssdt-1.aml, /Extra/ssdt-2.aml, depending on what SSDTs you already have installed.
 
-Clover: Place in /EFI/CLOVER/patched/ssdt-X.aml where 'X' is some number that you're not already using for SSDTs.
+Clover: Place in /EFI/CLOVER/ACPI/patched/ssdt-X.aml where 'X' is some number that you're not already using for SSDTs.
 
 
 ### Alternate way to install (PCIe/injector method)
