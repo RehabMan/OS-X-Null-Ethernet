@@ -109,7 +109,7 @@ bool NullEthernet::start(IOService *provider)
 
     if (!super::start(provider))
     {
-        AlwaysLog("NullEthernet: IOEthernetController::start failed.\n");
+        AlwaysLog("IOEthernetController::start failed.\n");
         return false;
     }
 
@@ -117,7 +117,7 @@ bool NullEthernet::start(IOService *provider)
     m_pProvider = OSDynamicCast(IOService, provider);
     if (!m_pProvider)
     {
-        AlwaysLog("NullEthernet: No provider.\n");
+        AlwaysLog("No provider.\n");
         return false;
     }
     m_pProvider->retain();
@@ -130,11 +130,11 @@ bool NullEthernet::start(IOService *provider)
     
     if (!attachInterface(reinterpret_cast<IONetworkInterface**>(&m_netif)))
     {
-        AlwaysLog("NullEthernet: attachInterface() failed.\n");
+        AlwaysLog("attachInterface() failed.\n");
         goto error1;
     }
 
-    AlwaysLog("NullEthernet: NullEthernet v1.0.3 starting.\n");
+    IOLog("NullEthernet v1.0.3 starting.\n");
 
 done:
     DebugLog("start() <===\n");
@@ -356,7 +356,7 @@ bool NullEthernet::configureInterface(IONetworkInterface *interface)
     if (data) {
         netStats = (IONetworkStats *)data->getBuffer();
         if (!netStats) {
-            AlwaysLog("NullEthernet: Error getting IONetworkStats\n.");
+            AlwaysLog("Error getting IONetworkStats\n.");
             result = false;
             goto done;
         }
@@ -366,7 +366,7 @@ bool NullEthernet::configureInterface(IONetworkInterface *interface)
     if (data) {
         etherStats = (IOEthernetStats *)data->getBuffer();
         if (!etherStats) {
-            AlwaysLog("NullEthernet: Error getting IOEthernetStats\n.");
+            AlwaysLog("Error getting IOEthernetStats\n.");
             result = false;
             goto done;
         }
@@ -609,7 +609,7 @@ done:
     return result;
     
 error1:
-    AlwaysLog("NullEthernet: Error creating medium dictionary.\n");
+    AlwaysLog("Error creating medium dictionary.\n");
     m_mediumDict->release();
     
     for (i = MEDIUM_INDEX_AUTO; i < MEDIUM_INDEX_COUNT; i++)

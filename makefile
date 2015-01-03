@@ -11,15 +11,17 @@ ifeq ($(findstring 64,$(BITS)),64)
 OPTIONS:=$(OPTIONS) -arch x86_64
 endif
 
+OPTIONS:=$(OPTIONS) -scheme NullEthernet
+
 .PHONY: all
 all: ssdt-rmne.aml
-	xcodebuild build $(OPTIONS) -scheme NullEthernet -configuration Debug
-	xcodebuild build $(OPTIONS) -scheme NullEthernet -configuration Release
+	xcodebuild build $(OPTIONS) -configuration Debug
+	xcodebuild build $(OPTIONS) -configuration Release
 
 .PHONY: clean
 clean:
-	xcodebuild clean $(OPTIONS) -scheme NullEthernet -configuration Debug
-	xcodebuild clean $(OPTIONS) -scheme NullEthernet -configuration Release
+	xcodebuild clean $(OPTIONS) -configuration Debug
+	xcodebuild clean $(OPTIONS) -configuration Release
 	
 .PHONY: update_kernelcache
 update_kernelcache:

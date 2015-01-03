@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845F78B1188F704E000A4B40 /* patch.txt in Resources */ = {isa = PBXBuildFile; fileRef = 845F78B0188F704E000A4B40 /* patch.txt */; };
-		848CB71C1891EBC0003E1DB1 /* ssdt-rmne.dsl in Resources */ = {isa = PBXBuildFile; fileRef = 848CB71B1891EBC0003E1DB1 /* ssdt-rmne.dsl */; };
-		8496256F1A15D76400524596 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8496256E1A15D76400524596 /* README.md */; };
-		D37BD68916C605F500C255A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D37BD68716C605F500C255A2 /* InfoPlist.strings */; };
 		D37BD69916C6065300C255A2 /* NullEthernet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D37BD69716C6065300C255A2 /* NullEthernet.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +21,6 @@
 		D37BD67F16C605F500C255A2 /* NullEthernet.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NullEthernet.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37BD68316C605F500C255A2 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
 		D37BD68616C605F500C255A2 /* NullEthernet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NullEthernet-Info.plist"; sourceTree = "<group>"; };
-		D37BD68816C605F500C255A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D37BD68D16C605F500C255A2 /* NullEthernet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NullEthernet-Prefix.pch"; sourceTree = "<group>"; };
 		D37BD69616C6065300C255A2 /* NullEthernet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullEthernet.h; sourceTree = "<group>"; };
 		D37BD69716C6065300C255A2 /* NullEthernet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullEthernet.cpp; sourceTree = "<group>"; };
@@ -111,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				D37BD68616C605F500C255A2 /* NullEthernet-Info.plist */,
-				D37BD68716C605F500C255A2 /* InfoPlist.strings */,
 				D37BD68D16C605F500C255A2 /* NullEthernet-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -214,9 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37BD68916C605F500C255A2 /* InfoPlist.strings in Resources */,
-				845F78B1188F704E000A4B40 /* patch.txt in Resources */,
-				848CB71C1891EBC0003E1DB1 /* ssdt-rmne.dsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,23 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8496256F1A15D76400524596 /* README.md in Sources */,
 				D37BD69916C6065300C255A2 /* NullEthernet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D37BD68716C605F500C255A2 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D37BD68816C605F500C255A2 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8420C5D618922DBF009BF3EE /* Debug */ = {
