@@ -79,7 +79,9 @@ end;
 ```
 
 
-Note:
+### Resetting Network Interfaces
+
+In order to work for Mac App Store access, NullEthernet must be assigned to 'en0'.
 
 If you've previously had network interfaces setup (eg. not a fresh install), you may need to remove all network interfaces and set them up again.  To do that, go into SysPrefs->Network and remove all interfaces, Apply, then remove /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist.  Reboot, then add all your network interfaces back, starting with NullEthernet.
 
@@ -89,6 +91,19 @@ If you've previously had network interfaces setup (eg. not a fresh install), you
 Downloads are available on Bitbucket:
 
 https://bitbucket.org/RehabMan/os-x-null-ethernet/downloads
+
+These builds are 64-bit only.  Don't expect them to work with the 32-bit kernel.
+
+
+### 32-bit Builds
+
+Although it can be modified for 32-bit builds, by default this project does not support 32-bit builds.  It is coded for 64-bit only.
+
+Should you need it (eg. in Snow Leopard 32-bit, attempting to access the MAS), a special universal build (32/64) is available here:
+
+http://www.tonymacx86.com/attachments/snow-leopard-desktop-support/118877d1419291999-app-store-error-rehabman-nullethernet-2014-1222.zip
+
+There are no plans to provide newer 32-bit builds as the kext above serves the purpose.
 
 
 ### Build Environment
@@ -101,11 +116,6 @@ the hacks previously used in the code (see DISABLE_ALL_HACKS in the source code)
 In addition, it can be built supporting any of these OS X targets: 10.8, 10.7, or 10.6.
 
 For greatest compatibility, the provided build is SDK 10.6 targeting 10.6.
-
-
-### 32-bit Builds
-
-This project does not support 32-bit builds.  It is coded for 64-bit only.
 
 
 ### Source Code:
