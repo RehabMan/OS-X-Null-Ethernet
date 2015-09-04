@@ -2,6 +2,8 @@
 
 KEXT=NullEthernet.kext
 DIST=RehabMan-NullEthernet
+BUILDDIR=./Build/Products
+INSTDIR=/System/Library/Extensions
 
 ifeq ($(findstring 32,$(BITS)),32)
 OPTIONS:=$(OPTIONS) -arch i386
@@ -30,18 +32,22 @@ update_kernelcache:
 
 .PHONY: install_debug
 install_debug:
-	sudo cp -R ./Build/Debug/$(KEXT) /System/Library/Extensions
+	sudo cp -R $(BUILDDIR)/Debug/$(KEXT) $(INSTDIR)
+	if [ "`which tag`" != "" ]; then sudo tag -a Purple $(INSTDIR)/$(KEXT); fi
 	make update_kernelcache
 
 .PHONY: install
 install:
-	sudo cp -R ./Build/Release/$(KEXT) /System/Library/Extensions
+	sudo cp -R $(BUILDDIR)/Release/$(KEXT) $(INSTDIR)
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(KEXT); fi
 	make update_kernelcache
 	
 .PHONY: install_inject
 install_inject:
-	sudo cp -R ./Build/Release/$(KEXT) /System/Library/Extensions
-	sudo cp -R ./Build/Release/NullEthernetInjector.kext /System/Library/Extensions
+	sudo cp -R $(BUILDDIR)/Release/$(KEXT) $(INSTDIR)
+	sudo cp -R $(BUILDDIR)/Release/NullEthernetInjector.kext $(INSTDIR)
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(KEXT); fi
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/NullEthernetInjector.kext; fi
 	make update_kernelcache
 
 .PHONY: distribute

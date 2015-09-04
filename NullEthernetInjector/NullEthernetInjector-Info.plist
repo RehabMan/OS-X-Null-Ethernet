@@ -26,10 +26,6 @@
 	<dict>
 		<key>NullEthernetInjector</key>
 		<dict>
-			<key>RM,Version</key>
-			<string>${PRODUCT_NAME} ${MODULE_VERSION}</string>
-			<key>RM,Build</key>
-			<string>${CONFIGURATION}-${LOGNAME}</string>
 			<key>CFBundleIdentifier</key>
 			<string>org.rehabman.driver.NullEthernet</string>
 			<key>IOClass</key>

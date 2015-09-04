@@ -28,10 +28,6 @@
 	<dict>
 		<key>NullEthernet</key>
 		<dict>
-			<key>RM,Version</key>
-			<string>${PRODUCT_NAME} ${MODULE_VERSION}</string>
-			<key>RM,Build</key>
-			<string>${CONFIGURATION}-${LOGNAME}</string>
 			<key>CFBundleIdentifier</key>
 			<string>${MODULE_NAME}</string>
 			<key>IOClass</key>

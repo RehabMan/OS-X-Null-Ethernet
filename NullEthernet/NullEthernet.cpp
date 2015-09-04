@@ -15,6 +15,7 @@
  *
  */
 
+#include <libkern/version.h>
 #include "NullEthernet.h"
 
 //REVIEW: avoids problem with Xcode 5.1.0 where -dead_strip eliminates these required symbols
@@ -134,7 +135,19 @@ bool NullEthernet::start(IOService *provider)
         goto error1;
     }
 
-    IOLog("NullEthernet v1.0.3 starting.\n");
+    // announce version
+    extern kmod_info_t kmod_info;
+    IOLog("NullEthernet: Version %s starting on OS X Darwin %d.%d.\n", kmod_info.version, version_major, version_minor);
+
+    // place version/build info in ioreg properties RM,Build and RM,Version
+    char buf[128];
+    snprintf(buf, sizeof(buf), "%s %s", kmod_info.name, kmod_info.version);
+    setProperty("RM,Version", buf);
+#ifdef DEBUG
+    setProperty("RM,Build", "Debug-" LOGNAME);
+#else
+    setProperty("RM,Build", "Release-" LOGNAME);
+#endif
 
 done:
     DebugLog("start() <===\n");
