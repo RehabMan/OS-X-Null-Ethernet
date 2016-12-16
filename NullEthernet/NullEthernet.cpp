@@ -43,6 +43,8 @@ bool NullEthernet::init(OSDictionary *properties)
         return false;
     }
 
+    setName("RMNE");
+
     m_pProvider = NULL;
     m_netif = NULL;
     m_isEnabled = false;

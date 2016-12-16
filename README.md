@@ -154,6 +154,11 @@ http://www.insanelymac.com/forum/topic/295534-mac-app-store-access-with-nullethe
 
 ### Change Log:
 
+2016-12-16 v1.0.5
+
+- use setName("RMNE") to avoid strange pause at boot up
+
+
 2016-12-16 v1.0.4
 
 - added a new installation method using NullEthernetForce.kext
