@@ -56,14 +56,24 @@ install_inject:
 	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/NullEthernetInjector.kext; fi
 	make update_kernelcache
 
+.PHONY: install_force
+install_force:
+	sudo cp -R $(BUILDDIR)/Release/$(KEXT) $(INSTDIR)
+	sudo cp -R $(BUILDDIR)/Release/NullEthernetForce.kext $(INSTDIR)
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(KEXT); fi
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/NullEthernetForce.kext; fi
+	make update_kernelcache
+
 .PHONY: distribute
 distribute:
 	if [ -e ./Distribute ]; then rm -r ./Distribute; fi
 	mkdir ./Distribute
-	cp -R ./Build/Debug ./Distribute
-	cp -R ./Build/Release ./Distribute
+	cp -R $(BUILDDIR)/Debug ./Distribute
+	cp -R $(BUILDDIR)/Release ./Distribute
 	rm -Rf ./Distribute/Debug/NullEthernetInjector.kext
+	rm -Rf ./Distribute/Debug/NullEthernetForce.kext
 	mv ./Distribute/Release/NullEthernetInjector.kext ./Distribute
+	mv ./Distribute/Release/NullEthernetForce.kext ./Distribute
 	cp patch.txt ./Distribute
 	cp ssdt-rmne.aml ./Distribute
 	find ./Distribute -path *.DS_Store -delete

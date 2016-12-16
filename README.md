@@ -9,6 +9,19 @@ Warning: I do not know if this works.  I do not have a USB WiFi to test with.  I
 Update: It definitely works.  Confirmed a handfull of times on the day of the initial release.
 
 
+### How to Install (NullEthernetForce method)
+
+Prior to version 1.0.4 (eg. 1.0.3 and older), ACPI or a PCI device injector was required to provide a catalyst to load NullEthernet.kext.
+
+As of version 1.0.4, NullEthernetForce.kext is provided such that you can load the kext without having a matching PCI device, and without having any ACPI catalyst.  This allows the kext to be used in scenarios where patching ACPI is not possible and there is not suitable PCI device to attach the kext (such as real Mac with non-working WiFi).
+
+To use this method install both NullEthernet.kext and NullEthernetForce.kext to the system volume.
+
+You can customize the MAC address by modifying the Info.plist in NullEthernetForce.kext/Contents/Info.plist.
+
+This method is also the easiest way to install in all cases.
+
+
 ### How to Install (DSDT/SSDT method):
 
 Install the kext itself, NullEthernet.kext, with Kext Wizard or your favorite kext installer.  The Release build should be used for normal installs.  Use the Debug build for troubleshooting.
@@ -24,7 +37,7 @@ Chameleon: Place in /Extra/ssdt.aml or /Extra/ssdt-1.aml, /Extra/ssdt-2.aml, dep
 Clover: Place in /EFI/CLOVER/ACPI/patched/ssdt-X.aml where 'X' is some number that you're not already using for SSDTs.
 
 
-### Alternate way to install (PCIe/injector method)
+### How to Install (PCIe/injector method)
 
 This method is most appropriate if you have a PCIe Ethernet device that is not supported or has drivers that do not work for it.  Instead of creating a special device in your DSDT, the kext can directly attach to the PCI device.  Install the kext, NullEthernet.kext, with Kext Wizard or your favorite kext installer, just as above.
 
@@ -140,6 +153,11 @@ http://www.insanelymac.com/forum/topic/295534-mac-app-store-access-with-nullethe
 
 
 ### Change Log:
+
+2016-12-16 v1.0.4
+
+- added a new installation method using NullEthernetForce.kext
+
 
 2014-10-16 v1.0.3
 
