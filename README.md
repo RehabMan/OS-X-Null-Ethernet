@@ -41,7 +41,7 @@ Clover: Place in /EFI/CLOVER/ACPI/patched/ssdt-X.aml where 'X' is some number th
 
 This method is most appropriate if you have a PCIe Ethernet device that is not supported or has drivers that do not work for it.  Instead of creating a special device in your DSDT, the kext can directly attach to the PCI device.  Install the kext, NullEthernet.kext, with Kext Wizard or your favorite kext installer, just as above.
 
-Instead of DSDT patching, you will instead create a custom NullEthernetInjector.  To do so, modify the Info.plist in NullEthernetInjector.kext/Contents/Info.plist.  Change IOPCIMatch to suit your device.  Also, change the MAC-address property as appropriate (default is 12:34:56:78:ab:cd).  Then install your custom NullEthernetInjector.kext like you would any kext.  When updates happen to the main NullEthernet.kext this step does not need to be repeated.
+Instead of DSDT patching, you will instead create a custom NullEthernetInjector.  To do so, modify the Info.plist in NullEthernetInjector.kext/Contents/Info.plist.  Change IOPCIMatch to suit your device.  Also, change the MAC-address property as appropriate (default is `12:34:56:78:ab:cd`).  Then install your custom NullEthernetInjector.kext like you would any kext.  When updates happen to the main NullEthernet.kext this step does not need to be repeated.
 
 
 ### Providing the MAC address:
