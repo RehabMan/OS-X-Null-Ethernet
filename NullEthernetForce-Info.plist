@@ -40,6 +40,8 @@
 			<string>RehabMan</string>
 			<key>Model</key>
 			<string>NullEthernet</string>
+			<key>built-in</key>
+			<data>AA==</data>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>

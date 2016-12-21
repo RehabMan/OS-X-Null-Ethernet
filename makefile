@@ -72,8 +72,9 @@ distribute:
 	cp -R $(BUILDDIR)/Release ./Distribute
 	rm -Rf ./Distribute/Debug/NullEthernetInjector.kext
 	rm -Rf ./Distribute/Debug/NullEthernetForce.kext
+	rm -Rf ./Distribute/Release/NullEthernetForce.kext
 	mv ./Distribute/Release/NullEthernetInjector.kext ./Distribute
-	mv ./Distribute/Release/NullEthernetForce.kext ./Distribute
+	#mv ./Distribute/Release/NullEthernetForce.kext ./Distribute
 	cp patch.txt ./Distribute
 	cp ssdt-rmne.aml ./Distribute
 	find ./Distribute -path *.DS_Store -delete
