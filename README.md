@@ -108,7 +108,7 @@ If you've previously had network interfaces setup (eg. not a fresh install), you
 
 Downloads are available on Bitbucket:
 
-https://bitbucket.org/RehabMan/os-x-null-ethernet/downloads
+https://bitbucket.org/RehabMan/os-x-null-ethernet/downloads/
 
 These builds are 64-bit only.  Don't expect them to work with the 32-bit kernel.
 
