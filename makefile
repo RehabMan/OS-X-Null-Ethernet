@@ -22,7 +22,7 @@ endif
 OPTIONS:=$(OPTIONS) -scheme NullEthernet
 
 .PHONY: all
-all: ssdt-rmne.aml
+all: SSDT-RMNE.aml
 	xcodebuild build $(OPTIONS) -configuration Debug
 	xcodebuild build $(OPTIONS) -configuration Release
 
@@ -76,7 +76,7 @@ distribute:
 	mv ./Distribute/Release/NullEthernetInjector.kext ./Distribute
 	#mv ./Distribute/Release/NullEthernetForce.kext ./Distribute
 	cp patch.txt ./Distribute
-	cp ssdt-rmne.aml ./Distribute
+	cp SSDT-RMNE.aml ./Distribute
 	find ./Distribute -path *.DS_Store -delete
 	find ./Distribute -path *.dSYM -exec echo rm -r {} \; >/tmp/org.voodoo.rm.dsym.sh
 	chmod +x /tmp/org.voodoo.rm.dsym.sh
@@ -85,6 +85,6 @@ distribute:
 	ditto -c -k --sequesterRsrc --zlibCompressionLevel 9 ./Distribute ./Archive.zip
 	mv ./Archive.zip ./Distribute/`date +$(DIST)-%Y-%m%d.zip`
 
-ssdt-rmne.aml : ssdt-rmne.dsl
+SSDT-RMNE.aml : SSDT-RMNE.dsl
 	iasl -p $@ $^
 

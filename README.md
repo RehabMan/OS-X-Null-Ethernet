@@ -17,7 +17,7 @@ Install the kext itself, NullEthernet.kext, with Kext Wizard or your favorite ke
 
 In order to cause the kext to be loaded, you need to apply the DSDT patch provided in patch.txt.  It adds a fake device ‘RMNE’ which the driver will attach to.
 
-You may also use the provided ssdt-rmne.aml as an extra SSDT for the bootloader to load in lieu of implementing the DSDT patch.
+You may also use the provided SSDT-RMNE.aml as an extra SSDT for the bootloader to load in lieu of implementing the DSDT patch.
 
 To install the SSDT:
 
@@ -117,9 +117,13 @@ These builds are 64-bit only.  Don't expect them to work with the 32-bit kernel.
 
 Although it can be modified for 32-bit builds, by default this project does not support 32-bit builds.  It is coded for 64-bit only.
 
-Should you need it (eg. in Snow Leopard 32-bit, attempting to access the MAS), a special universal build (32/64) is available here:
+Should you need it (eg. in Snow Leopard 32-bit, attempting to access the MAS), a special universal build (32/64) is available.
 
-http://www.tonymacx86.com/attachments/snow-leopard-desktop-support/118877d1419291999-app-store-error-rehabman-nullethernet-2014-1222.zip
+Post link:
+https://www.tonymacx86.com/threads/app-store-error.150295/page-3#post-948310
+
+Direct attachment link:
+https://www.tonymacx86.com/attachments/rehabman-nullethernet-2014-1222-zip.118877/
 
 There are no plans to provide newer 32-bit builds as the kext above serves the purpose.
 
